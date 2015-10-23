@@ -1,9 +1,12 @@
+[user]
+  name = Giles Van Gruisen
+  email = gilesvangruisen@me.com
 [init]
   templatedir = ~/.git_template
 [push]
-  default = current
+  default = simple
 [color]
-  ui = auto
+  ui = true 
 [alias]
   aa = add --all
   ap = add --patch
@@ -11,7 +14,12 @@
   ci = commit -v
   co = checkout
   pf = push --force-with-lease
-  st = status
+  st = status -sb
+  cm = commit -m
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  adda = add . -A
+  di = diff
+  pr = pull-request -i
 [core]
   excludesfile = ~/.gitignore
   autocrlf = input
