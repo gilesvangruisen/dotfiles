@@ -1,5 +1,4 @@
-" Leader
-let mapleader = " "
+" Leader let mapleader = " "
 
 set backspace=2   " Backspace deletes like most programs in insert mode
 set nobackup
@@ -84,7 +83,7 @@ set textwidth=80
 set colorcolumn=+1
 
 " Numbers
-set number
+set relativenumber " Relative line number
 set numberwidth=5
 
 " Tab completion
@@ -153,6 +152,8 @@ set complete+=kspell
 
 " Always use vertical diffs
 set diffopt+=vertical
+
+set clipboard=unnamedplus
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
