@@ -57,6 +57,8 @@ eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
 
+alias git=hub
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
