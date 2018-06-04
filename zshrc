@@ -78,6 +78,8 @@ export ANDROID_HOME=$HOME/Library/Android/sdk
 export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:/usr/local/go/bin
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
