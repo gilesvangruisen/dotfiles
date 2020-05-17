@@ -23,9 +23,13 @@
   adda = add . -A
   di = diff
   pr = pull-request -i
+  rbm = rebase -i origin/master
+  rbc = rebase --continue
+  rbca = rebase --abort
 [core]
   excludesfile = ~/.gitignore
 	autocrlf = false
+	pager = less -x1,5
 [merge]
   ff = only
 [commit]
@@ -38,3 +42,5 @@
   path = ~/.gitconfig.local
 [credential]
 	helper = osxkeychain
+[url "git@github.com:"]
+	insteadOf = https://github.com/

@@ -1,11 +1,25 @@
 .DS_Store
 *.sw[nop]
 .bundle
+
+# Distribution / packaging
+.Python
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# dotenv
 .env
-db/*.sqlite3
-log/*.log
-rerun.txt
-tags
-!tags/
-tmp/**/*
-!tmp/cache/.keep
+
+# virtualenv
+.venv
+venv/
+ENV/
+env/
+
+# node modules
+node_modules/
+
+# Personal notes
+__notes

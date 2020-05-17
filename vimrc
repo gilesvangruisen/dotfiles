@@ -116,10 +116,20 @@ nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" vim-rspec mappings
-nnoremap <Leader>t :call RunCurrentSpecFile()<CR>
-nnoremap <Leader>s :call RunNearestSpec()<CR>
-nnoremap <Leader>l :call RunLastSpec()<CR>
+" vim-test mappings
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
+nnoremap <Leader>s :TestFile<CR>
+nnoremap <Leader>a :TestSuite<CR>
+nnoremap <Leader>v :TestVisit<CR>
+nnoremap <Leader>l :TestLast<CR>
+
+" make test commands execute using dispatch.vim
+let test#strategy = "dispatch"
 
 " Run commands that require an interactive shell
 nnoremap <Leader>r :RunInInteractiveShell<space>
@@ -136,6 +146,8 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " configure syntastic syntax checking to check on open as well as save
 let g:syntastic_check_on_open=1
