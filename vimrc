@@ -147,6 +147,10 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Quicker line movement
+vnoremap <C-j> :m '>+1<cr>gv=gv
+vnoremap <C-k> :m '<-2<CR>gv=gv
+
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " configure syntastic syntax checking to check on open as well as save
