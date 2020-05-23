@@ -63,6 +63,15 @@ set shiftwidth=2
 set shiftround
 set expandtab
 
+" Undercurl misspelled words
+set spell
+hi SpellBad gui=undercurl,bold
+hi SpellBad cterm=undercurl,bold
+hi SpellBad ctermbg=none
+hi SpellCap gui=undercurl,bold
+hi SpellCap cterm=undercurl,bold
+hi SpellCap ctermbg=none
+
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -169,7 +178,7 @@ set complete+=kspell
 " Always use vertical diffs
 set diffopt+=vertical
 
-set clipboard=unnamedplus
+set clipboard=unnamed
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
